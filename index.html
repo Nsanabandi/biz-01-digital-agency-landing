@@ -264,22 +264,28 @@
           </div>
         </div>
 
-        <form class="form card" onsubmit="event.preventDefault(); alert('Message sent (demo) ✅');">
-          <label>
-            Name
-            <input type="text" required placeholder="Your name" />
-          </label>
-          <label>
-            Email
-            <input type="email" required placeholder="you@email.com" />
-          </label>
-          <label>
-            Project details
-            <textarea rows="5" required placeholder="What do you need built?"></textarea>
-          </label>
-          <button class="btn btn-block" type="submit">Send Message</button>
-          <small class="fineprint">This is a demo form (no backend yet).</small>
-        </form>
+        <form class="form card" id="contactForm" novalidate>
+  <label>
+    Name
+    <input type="text" required placeholder="Your name" />
+  </label>
+
+  <label>
+    Email
+    <input type="email" required placeholder="you@email.com" />
+  </label>
+
+  <label>
+    Project details
+    <textarea rows="5" required placeholder="What do you need built?"></textarea>
+  </label>
+
+  <button class="btn btn-block" type="submit">Send Message</button>
+
+  <small class="fineprint">
+    This is a demo form (no backend yet).
+  </small>
+</form>
       </div>
     </section>
   </main>
@@ -295,17 +301,6 @@
     </div>
   </footer>
 
-  <script>
-    
-    const btn = document.querySelector(".nav-toggle");
-    const nav = document.querySelector("[data-nav]");
-    btn.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    // year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
